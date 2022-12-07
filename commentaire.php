@@ -55,10 +55,10 @@ if(isset($_POST['submit'])) {
 
         <main>
 
-            <div>
+            <div class="centre">
 
-                <form action="" method="POST" class="formulaire">
-                    <textarea name="commentaire" rows="10" cols="65" placeholder="Write your comment here..."></textarea>
+                <form action="" method="POST" class="formulaire comm">
+                    <textarea name="commentaire" rows="10" cols="60" placeholder="Write your comment here..."></textarea>
 
                     <button name="submit">Send</button>
                 </form>
@@ -72,7 +72,7 @@ if(isset($_POST['submit'])) {
                 ?>
 
             </div>
-            
+
         </main>
     </body>
 </html>

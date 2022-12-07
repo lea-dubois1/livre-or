@@ -89,45 +89,50 @@ if(isset($_POST['submit'])) {
 
         <?php include 'header.php' ?>
 
-        <main class="main-inscription">
+        <main>
 
-            <form action="" method="POST" class="formulaire">
+            <div class="centre">
 
-                <h2>SIGNUP</h2>
+                <form action="" method="POST" class="formulaire">
 
-                <div class="group">      
-                    <input type="text" name="login" value="<?php if($error){ echo $_POST['login'];} ?>" required>
-                    <span class="highlight"></span>
-                    <span class="bar"></span>
-                    <label>Login</label>
-                </div>
-                
-                <div class="group">      
-                    <input type="password" name="password" required>
-                    <span class="highlight"></span>
-                    <span class="bar"></span>
-                    <label>Password</label>
-                </div>
+                    <h2>SIGNUP</h2>
 
-                <div class="group">      
-                    <input type="password" name="passwordConfirm" required>
-                    <span class="highlight"></span>
-                    <span class="bar"></span>
-                    <label>Confirm password</label>
-                </div>
+                    <div class="group">      
+                        <input type="text" name="login" value="<?php if($error){ echo $_POST['login'];} ?>" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Login</label>
+                    </div>
+                    
+                    <div class="group">      
+                        <input type="password" name="password" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Password</label>
+                    </div>
 
-                <button name="submit">Signup</button>
-                
-                <?php
+                    <div class="group">      
+                        <input type="password" name="passwordConfirm" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Confirm password</label>
+                    </div>
 
-                    // Display error messages (cf signup.php) //
-    
-                    if($created) {echo '<strong>Success!</strong> Your account is now created and you can login.';}
+                    <button name="submit">Signup</button>
+                    
+                    <?php
 
-                    if($error) {echo '<strong>Error!</strong> '. $error;}
-                ?>
+                        // Display error messages (cf signup.php) //
+        
+                        if($created) {echo '<strong>Success!</strong> Your account is now created and you can login.';}
 
-            </form>
+                        if($error) {echo '<strong>Error!</strong> '. $error;}
+                    ?>
+
+                </form>
+
+            </div>
+
         </main>
     </body>
 </html>

@@ -11,10 +11,15 @@
         <?php include 'header.php' ?>
         <?php if (session_status() == PHP_SESSION_NONE){ session_start();} ?>
 
-        <main class="main-home">
-            <h1 class="welcome">HELLO <?php if($_SESSION){echo '&nbsp' . strtoupper($_SESSION['login']);} ?> </h1>
-            <p>WELCOME TO MY GOLDEN BOOK</p>
-            <p>FEEL FREE TO LEAVE A COMMENT</p>
+        <main>
+
+            <div class="centre">
+
+                <h1 class="welcome">HELLO <?php if($_SESSION){echo '&nbsp' . strtoupper($_SESSION['login']);} ?> </h1>
+                <p>WELCOME TO MY GOLDEN BOOK</p>
+                <p>FEEL FREE TO LEAVE A COMMENT</p>
+
+            </div>
 
         </main>
     </body>

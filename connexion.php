@@ -65,33 +65,38 @@ if(isset($_POST['submit'])){
 
         <main>
 
-            <form action="" method="POST" class="formulaire">
-            
-                <h2>LOGIN</h2>
+            <div class="centre">
 
-                <div class="group">      
-                    <input type="text" name="login" required>
-                    <span class="highlight"></span>
-                    <span class="bar"></span>
-                    <label>Login</label>
-                </div>
+                <form action="" method="POST" class="formulaire">
                 
-                <div class="group">      
-                    <input type="password" name="password" required>
-                    <span class="highlight"></span>
-                    <span class="bar"></span>
-                    <label>Password</label>
-                </div>
+                    <h2>LOGIN</h2>
 
-                <button name="submit">Login</button>
+                    <div class="group">      
+                        <input type="text" name="login" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Login</label>
+                    </div>
+                    
+                    <div class="group">      
+                        <input type="password" name="password" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Password</label>
+                    </div>
 
-                <?php
-                    // Display error messages (cf login.php) //
+                    <button name="submit">Login</button>
 
-                    if($error) {echo '<strong>Error!</strong> '. $error;}
-                ?>
+                    <?php
+                        // Display error messages (cf login.php) //
 
-            </form>
+                        if($error) {echo '<strong>Error!</strong> '. $error;}
+                    ?>
+
+                </form>
+
+            </div>
+            
         </main>
     </body>
 </html>

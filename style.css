@@ -17,20 +17,32 @@ body
 
 main
 {
-   margin: 30vh 37vw;
-   width: fit-content;
-   padding: 2vw;
+   margin-top: -2vh;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
-.main-home
+h2, h1
 {
-   padding: 3.5vw;
+   text-align: center;
 }
-
 
 .comm
 {
-   margin: 33vh 31vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
+.comm button
+{
+   margin: 3%;
+   padding: 1%;
+   width: 7vw;
+}
+
+
+
 
 
 
@@ -78,7 +90,7 @@ label{
 input:focus ~ label, input:valid ~ label{
    top:-20px;
    font-size:2vh;
-   color:#9e5341;
+   color:#441a83;
 }
 
 /* BOTTOM BARS ================================= */
@@ -91,7 +103,7 @@ input:focus ~ label, input:valid ~ label{
    width:0;
    bottom:1px; 
    position:absolute;
-   background:#9e5341;
+   background:#441a83;
    transition:0.2s ease all; 
    -moz-transition:0.2s ease all; 
    -webkit-transition:0.2s ease all;
@@ -128,15 +140,15 @@ input:focus ~ .highlight {
 
 /* animations*/
 @-webkit-keyframes inputHighlighter {
-  from { background:#9e5341; }
+  from { background:#441a83; }
  to 	{ width:0; background:transparent; }
 }
 @-moz-keyframes inputHighlighter {
-  from { background:#9e5341; }
+  from { background:#441a83; }
  to 	{ width:0; background:transparent; }
 }
 @keyframes inputHighlighter {
-  from { background:#9e5341; }
+  from { background:#441a83; }
  to 	{ width:0; background:transparent; }
 }
 

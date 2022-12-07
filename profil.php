@@ -111,47 +111,52 @@ if(isset($_POST['submit'])) {
 
         <main>
 
-            <h2 class="title_change">CHANGE PROFILE</h2>
+            <div class="centre">
 
-            <form action="" method="POST" class="formulaire">
+                <h2 class="title_change">CHANGE PROFILE</h2>
 
-                <div class="group">      
-                    <input type="text" name="login" value="<?php {echo $_SESSION['login'];} ?>" required>
-                    <span class="highlight"></span>
-                    <span class="bar"></span>
-                    <label>Login</label>
-                </div>
-                
-                <div class="group">      
-                    <input type="password" name="old-password" required>
-                    <span class="highlight"></span>
-                    <span class="bar"></span>
-                    <label>Password</label>
-                </div>
-                
-                <div class="group">      
-                    <input type="password" name="new-password" placeholder="New password">
-                    <span class="highlight"></span>
-                    <span class="bar"></span>
-                </div>
-                
-                <div class="group">      
-                    <input type="password" name="confirm-password" placeholder="Confirm new password">
-                    <span class="highlight"></span>
-                    <span class="bar"></span>
-                </div>
+                <form action="" method="POST" class="formulaire">
 
-                <button name="submit"><span>Edit</span></button>
-                
-                <?php
+                    <div class="group">      
+                        <input type="text" name="login" value="<?php {echo $_SESSION['login'];} ?>" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Login</label>
+                    </div>
+                    
+                    <div class="group">      
+                        <input type="password" name="old-password" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Password</label>
+                    </div>
+                    
+                    <div class="group">      
+                        <input type="password" name="new-password" placeholder="New password">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                    </div>
+                    
+                    <div class="group">      
+                        <input type="password" name="confirm-password" placeholder="Confirm new password">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                    </div>
 
-                    if($error) {echo '<strong>Error!</strong> '. $error;}
+                    <button name="submit"><span>Edit</span></button>
+                    
+                    <?php
 
-                    if($ok >= 1) {echo "<strong>Success!</strong> Your profil have been edited successfully";}
+                        if($error) {echo '<strong>Error!</strong> '. $error;}
 
-                ?>
+                        if($ok >= 1) {echo "<strong>Success!</strong> Your profil have been edited successfully";}
 
-            </form>
+                    ?>
+
+                </form>
+
+            </div>
+
         </main>
     </body>
 </html>
