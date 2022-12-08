@@ -46,7 +46,7 @@ if(isset($_POST['submit'])) {
                 $sqlPass = "update utilisateurs set password = '$hash' where login = '$login'";
                 $rs = mysqli_query($db,$sqlPass);
                 $_SESSION['password'] = $hash;
-                $ok = 1;
+                $ok = "Your password was been edited";
 
             }
 
@@ -57,7 +57,7 @@ if(isset($_POST['submit'])) {
 
                 $error = "The login already exist";
 
-            }elseif(strlen($login) <= 5){    // If the login's lenght is less or equal to 5
+            }elseif(strlen($login) <= 4){    // If the login's lenght is less or equal to 5
 
                 $error = "The login is too short";
 
@@ -70,7 +70,7 @@ if(isset($_POST['submit'])) {
                 $sqlLog = "update utilisateurs set login = '$loginNew' where login = '$login'";
                 $rs = mysqli_query($db,$sqlLog);
                 $_SESSION['login'] = $loginNew;
-                $ok = 1;
+                $ok = "Your login was been edited";
 
             }
 
@@ -84,16 +84,6 @@ if(isset($_POST['submit'])) {
 }
 
 ?>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -149,7 +139,7 @@ if(isset($_POST['submit'])) {
 
                         if($error) {echo '<strong>Error!</strong> '. $error;}
 
-                        if($ok >= 1) {echo "<strong>Success!</strong> Your profil have been edited successfully";}
+                        if($ok >= 1) {echo "<strong>Success!</strong>" . $ok;}
 
                     ?>
 
@@ -160,3 +150,13 @@ if(isset($_POST['submit'])) {
         </main>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
