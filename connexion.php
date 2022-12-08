@@ -85,7 +85,9 @@ if(isset($_POST['submit'])){
                         <label>Password</label>
                     </div>
 
-                    <button name="submit">Login</button>
+                    <div class="frame">
+                        <button class="custom-btn btn-4" name="submit">Login</button>
+                    </div>
 
                     <?php
                         // Display error messages (cf login.php) //

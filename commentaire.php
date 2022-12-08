@@ -60,7 +60,9 @@ if(isset($_POST['submit'])) {
                 <form action="" method="POST" class="formulaire comm">
                     <textarea name="commentaire" rows="10" cols="60" placeholder="Write your comment here..."></textarea>
 
-                    <button name="submit">Send</button>
+                    <div class="frame">
+                        <button class="custom-btn btn-4" name="submit">Send</button>
+                    </div>
                 </form>
 
                 <?php

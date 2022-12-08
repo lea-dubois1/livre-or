@@ -38,13 +38,13 @@
                 -->
                 <ul id="menu">
                 <a href="index.php"><li>Home</li></a>
-                <a href="inscription.php"><li>Signup</li></a>
-                <a href="connexion.php"><li>Login</li></a>
-                <a href="profil.php"><li>Profile</li></a>
+                <?php if(!$_SESSION){echo '<a href="inscription.php"><li>Signup</li></a>';} ?>
+                <?php if(!$_SESSION){echo '<a href="connexion.php"><li>Login</li></a>';} ?>
+                <?php if($_SESSION){echo '<a href="profil.php"><li>Profile</li></a>';} ?>
                 <a href="livre-or.php"><li>Golden Book</li></a>
-                <a href="commentaire.php"><li>Comment</li></a>
+                <?php if($_SESSION){echo '<a href="commentaire.php"><li>Comment</li></a>';} ?>
                 <a href="https://github.com/lea-dubois1" target="_blank"><li>My GitHub</li></a>
-                <?php if($_SESSION){echo '<button type="submit" value="deconnexion" name="deconnexion" class="deco"><a href="logout.php">Logout</a></button>';} ?>
+                <?php if($_SESSION){echo '<a value="deconnexion" name="deconnexion" href="logout.php"><li>Logout</li></a>';} ?>
                 </ul>
             </div>
             </nav>

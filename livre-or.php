@@ -13,7 +13,7 @@
 
         <main>
 
-            <div class="centre">
+            <div class="centre livreor">
 
                 <h2 class="users-data">Comments</h2>
 
@@ -27,8 +27,8 @@
 
                     while ($result !=NULL){
 
-                        echo 'POST THE ' . $date . ' BY ' . $result['login'] . '<br>';
-                        echo $result['commentaire'] . '<br><br>';
+                        echo '<br>POST THE ' . $date . ' BY ' . $result['login'] . ' :<br><br>';
+                        echo $result['commentaire'] . '<br>___________________________<br>';
 
                         $result = mysqli_fetch_assoc($rs);
                         echo '</tr>';

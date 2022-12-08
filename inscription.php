@@ -26,19 +26,7 @@ if(isset($_POST['submit'])) {
     if($num <= 0) {     // If the login do not exist in the Database, we check for errors
 
         // LIST OF ERRORS
-        if(strlen($login) <= 4){    // If the login's lenght is less or equal to 5
-
-            $error = "Le login est trop court";
-
-        }elseif(strlen($password) <= 4){    // If the password's lenght is less or equal to 5
-
-            $error = "Le mot de passe est trop court";
-
-        }elseif(preg_match("[\W]", $_POST['login'])){    // If there is non-alphanumeric characters in the login
-
-            $error = "Les caractères spéciaux ne sont pas autorisés";
-
-        }elseif(($password != $passwordConfirm)) {    // If the password is different than the password's confirmation
+        if(($password != $passwordConfirm)) {    // If the password is different than the password's confirmation
 
             $error = "Les mots de passe ne sont pas identiques";
         }else{      // If everithing is fine and there is no error
@@ -64,10 +52,6 @@ if(isset($_POST['submit'])) {
 }  
     
 ?>
-
-
-
-
 
 
 
@@ -118,8 +102,10 @@ if(isset($_POST['submit'])) {
                         <label>Confirm password</label>
                     </div>
 
-                    <button name="submit">Signup</button>
-                    
+                    <div class="frame">
+                        <button class="custom-btn btn-4" name="submit">Singup</button>
+                    </div>
+
                     <?php
 
                         // Display error messages (cf signup.php) //

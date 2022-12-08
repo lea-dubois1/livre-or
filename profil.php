@@ -26,11 +26,7 @@ if(isset($_POST['submit'])) {
         
         if (!empty($passwordNew)){
 
-            if(strlen($passwordNew) <= 5){    // If the password's lenght is less or equal to 5
-
-                $error = "The password is too short";
-
-            }elseif (empty($passwordNewConfirm)){
+            if (empty($passwordNewConfirm)){
 
                 $error = "Please confirm password";
 
@@ -56,14 +52,6 @@ if(isset($_POST['submit'])) {
             if($numRows!=1){
 
                 $error = "The login already exist";
-
-            }elseif(strlen($login) <= 4){    // If the login's lenght is less or equal to 5
-
-                $error = "The login is too short";
-
-            }elseif(preg_match("[\W]", $loginNew)){    // If there is non-alphanumeric characters in the login
-
-                $error = "Specials characters are not allowed";
 
             }else{
 
@@ -101,7 +89,7 @@ if(isset($_POST['submit'])) {
 
         <main>
 
-            <div class="centre">
+            <div class="centre changeProfil">
 
                 <h2 class="title_change">CHANGE PROFILE</h2>
 
@@ -133,8 +121,10 @@ if(isset($_POST['submit'])) {
                         <span class="bar"></span>
                     </div>
 
-                    <button name="submit"><span>Edit</span></button>
-                    
+                    <div class="frame">
+                        <button class="custom-btn btn-4" name="submit">Edit</button>
+                    </div>
+
                     <?php
 
                         if($error) {echo '<strong>Error!</strong> '. $error;}
