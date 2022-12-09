@@ -125,13 +125,13 @@ if(isset($_POST['submit'])) {
                         <button class="custom-btn btn-4" name="submit">Edit</button>
                     </div>
 
-                    <?php
-
-                        if($error) {echo '<strong>Error!</strong> '. $error;}
-
-                        if($ok >= 1) {echo "<strong>Success!</strong>" . $ok;}
-
-                    ?>
+                    <p>
+                        <?php if($error) {echo '<strong>Error!</strong> '. $error;} ?>
+                    </p>
+                    
+                    <p>
+                        <?php if($ok >= 1) {echo "<strong>Success!</strong>" . $ok;} ?>
+                    </p>
 
                 </form>
 

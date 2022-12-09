@@ -28,7 +28,7 @@ if(isset($_POST['submit'])) {
         // LIST OF ERRORS
         if(($password != $passwordConfirm)) {    // If the password is different than the password's confirmation
 
-            $error = "Les mots de passe ne sont pas identiques";
+            $error = "Passwords do not match";
         }else{      // If everithing is fine and there is no error
             
             // Cripting the password
@@ -47,7 +47,7 @@ if(isset($_POST['submit'])) {
         }
            
     }else{      // If login already exist
-        $exists = "Le login existe déjà"; 
+        $error = "Le login existe déjà"; 
     }
 }  
     

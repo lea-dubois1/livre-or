@@ -15,7 +15,8 @@
 
             <div class="centre livreor">
 
-                <h2 class="users-data">Comments</h2>
+                <h2>Comments</h2>
+
 
                 <?php 
                                             
@@ -25,15 +26,21 @@
                     $dateOld = $result['date'];
                     $date =  date('d-m-Y', strtotime($dateOld));
 
-                    while ($result !=NULL){
+                    echo '<div class="flou">';
+                        while ($result !=NULL){
 
-                        echo '<br>POST THE ' . $date . ' BY ' . $result['login'] . ' :<br><br>';
-                        echo $result['commentaire'] . '<br>___________________________<br>';
+                            echo '<br>POST THE ' . $date . ' BY ' . $result['login'] . ' :<br><br>';
+                            echo $result['commentaire'] . '<br><br><div class="border"></div>';
 
-                        $result = mysqli_fetch_assoc($rs);
-                        echo '</tr>';
-                    }
+                            $result = mysqli_fetch_assoc($rs);
+                            echo '</tr>';
+                        }
+                    echo '</div>';
+
+                    echo '<br>'
                 ?>
+
+                <?php if($_SESSION){echo '<div class="frame"> <button class="custom-btn btn-4" name="submit">Comment</button> </div><br>';} ?>
 
             </div>
 
