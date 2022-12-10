@@ -40,6 +40,7 @@
                     echo '<br>'
                 ?>
 
+                <?php if($_SESSION){echo '<div class="frame"> <a href="commentaire.php"><button class="custom-btn btn-4">Comment</button></a> </div><br>';} ?>
 
             </div>
 
