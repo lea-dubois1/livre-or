@@ -14,13 +14,14 @@ if(isset($_POST['submit'])) {
 
     }else{
 
-        $comm = $_POST['commentaire'];
+        $comm = htmlspecialchars($_POST['commentaire']);
+        $comm1 = nl2br ($comm);
         $id = $_SESSION['id'];
 
         date_default_timezone_set('Europe/Paris');
         $date = date('Y-m-d H:i:s');
 
-        $sql = "INSERT INTO `commentaires`(`commentaire`, `id_utilisateur`, `date`) VALUES ('$comm', '$id', '$date')";
+        $sql = "INSERT INTO `commentaires`(`commentaire`, `id_utilisateur`, `date`) VALUES ('$comm1', '$id', '$date')";
     
         $result = mysqli_query($db, $sql);
 
@@ -69,7 +70,7 @@ if(isset($_POST['submit'])) {
 
                     if($error) {echo '<strong>Error!</strong> '. $error;}
 
-                    if($ok >= 1) {echo "<strong>Success!</strong> Your profil have been edited successfully";}
+                    if($ok >= 1) {echo "<strong>Success!</strong> Your comment have been sent successfully";}
 
                 ?>
 
