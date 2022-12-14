@@ -14,8 +14,8 @@ if(isset($_POST['submit'])) {
 
     }else{
 
-        $comm = htmlspecialchars($_POST['commentaire']);
-        $comm1 = nl2br ($comm);
+        $comm = htmlspecialchars($_POST['commentaire'], ENT_QUOTES);
+		$comm1 = nl2br ($comm);
         $id = $_SESSION['id'];
 
         date_default_timezone_set('Europe/Paris');
